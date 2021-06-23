@@ -13,12 +13,19 @@
   <main >
     <h2 class="site-headline">awesome startup employee directory</h2>
     <div class="gallery-grid">
-       <!-- app.js and modal.js are being inserted here in their respective files -->
-      <div class="overlay hidden">
-        <dialog id="modalDialog" aria-modal="true" class="modal-dialog-container"></dialog>
-      </div>
+       <!-- app.js is being inserted here in their respective files -->
     </div>
   </main>
+
+  <div class="overlay hidden">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+      <div class="modal-dialog-container">
+      <!-- modal information will be added with JS here -->
+      </div>
+    </div>
+  </div> 
+  
   <script src="javascript/app.js"></script>
   <!-- <script src="javascript/modal.js"></script> -->
 </body>

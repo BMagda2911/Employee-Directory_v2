@@ -1,0 +1,128 @@
+/* ===================================== 
+   Page Styles
+======================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 0;
+  position: relative; /* because I need an absolute positioning for the modal overlay, I need this line */
+}
+
+.site-headline {
+  text-transform: capitalize;
+  color: darkslategray;
+  margin-top: 60px;
+}
+
+/* this is where the gallery starts and grid is turned on */
+.gallery-grid {
+  max-width: 1240px;
+  margin: 50px auto;
+  margin-bottom: 50px;
+  display:  grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+img.avatar {
+  width: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  border-radius: 50%;
+}
+
+.employee-card {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #e9e9e9;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.employee-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  line-height: 0px;
+  max-width: 70%;
+  padding: 15px;
+  text-align: left;
+}
+
+.employee-name {
+  color: darkslategray;
+}
+
+.employee-email,
+.employee-address {
+  color: darkgray;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, .6);
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal-content {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  color: darkgray;
+  border: 1px solid #778;
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: absolute;
+  top: 90px;
+  left: 1084px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 1098px;
+  top: 102px;
+  z-index: 1;
+  border: none;
+  font-size: 28px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modal-content.avatar {
+  width: 50px;
+  height: auto;
+}
+
+.center-content,
+.avatar.center-content {
+  margin: 0 auto;
+}
+
+.grey-line {
+  color: #DCDCDC;
+}
