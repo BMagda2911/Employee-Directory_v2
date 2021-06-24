@@ -11,19 +11,25 @@ body {
 	font-family: 'Raleway', sans-serif;
   text-align: center;
   margin: 0;
-  position: relative; /* because I need an absolute positioning for the modal overlay, I need this line */
+   position: relative; /*because I need an absolute positioning for the modal overlay, I need this line*/
 }
 
 .site-headline {
   text-transform: capitalize;
   color: darkslategray;
-  margin-top: 60px;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  width: max-content;
+  margin-left: 660px;
+  margin-right: auto;
+  letter-spacing: 1.5px;
 }
 
 /* this is where the gallery starts and grid is turned on */
 .gallery-grid {
-  max-width: 1240px;
-  margin: 50px auto;
+  width: 1240px;
+  height: auto;
+  margin: 30px auto;
   margin-bottom: 50px;
   display:  grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -50,6 +56,12 @@ img.avatar {
   padding: 15px;
 }
 
+.employee-card:hover {
+  border-left: 3px solid #4E9B86;
+  border-bottom: 3px solid #4E9B86;
+  transform: scale(1.1);
+}
+
 .employee-info-container {
   display: flex;
   flex-direction: column;
@@ -70,42 +82,45 @@ img.avatar {
   color: darkgray;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(100, 100, 100, .6);
-}
-
 .hidden {
   display: none;
 }
 
 .modal {
   position: relative;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background:  rgba(68, 68, 68, 0.7);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .modal-content {
-  width: 375px;
-  margin: 15% auto auto;
-  position: relative;
-  text-align: center;
-  background: #fff;
-  color: darkgray;
-  border: 1px solid #778;
-  border-radius: 10px;
-  padding: 30px 20px;
-  position: absolute;
-  top: 90px;
-  left: 1084px;
+    width: 430px;
+    margin: 15% auto auto;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    color: darkgray;
+    border: 1px solid #778;
+    border-radius: 10px;
+    padding: 30px 20px;
+    position: absolute; /* in relation to body tag*/
+    top: 13.5%;
+    left: 41.5%;
+    height: 500px;
+    font-size: 17px;
 }
 
 .modal-close {
-  position: absolute;
-  right: 1098px;
-  top: 102px;
+  position: absolute; /* in relation to .modal-content */
+  right: 42.5%;
+  top: 180px;
   z-index: 1;
   border: none;
   font-size: 28px;
@@ -114,7 +129,7 @@ img.avatar {
 }
 
 .modal-content.avatar {
-  width: 50px;
+  width: 140px;
   height: auto;
 }
 
@@ -124,5 +139,9 @@ img.avatar {
 }
 
 .grey-line {
+  height: 2px;
+  background-color: #DCDCDC;
   color: #DCDCDC;
+  border: none;
+  margin: 40px 15px;
 }

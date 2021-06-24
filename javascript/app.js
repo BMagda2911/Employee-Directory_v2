@@ -76,18 +76,17 @@ function displayModal(index) {
   let date = new Date(dob.date); // dob is date of birth
 
   const modalContentHTML = `
-   
-  <div class="modal-content center-content">
-    <img class="avatar center-content" src="${picture.large}" />
-    <h2 class="employee-name">${fullEmployeeName}</h2>
-    <p class="employee-email">${email}</p>
-    <p class="employee-address">${city}</p>
-    <hr class="grey-line"/>
-    <p>${phone}</p>
-    <p class="employee-address">${street.number} ${street.name}, ${state} ${postcode}</p>
-    <p>Birthday:
-    ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
-  </div>
+    <div class="modal-content center-content">
+      <img class="avatar center-content" src="${picture.large}" />
+      <h2 class="employee-name">${fullEmployeeName}</h2>
+      <p class="employee-email">${email}</p>
+      <p class="employee-address">${city}</p>
+      <hr class="grey-line"/>
+      <p>${phone}</p>
+      <p class="employee-address">${street.number} ${street.name}, ${state} ${postcode}</p>
+      <p>Birthday:
+      ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+    </div>
 `;
 overlay.classList.remove("hidden");
 modalDialogContainer.innerHTML = modalContentHTML;
