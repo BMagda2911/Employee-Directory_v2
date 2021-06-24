@@ -11,7 +11,6 @@ body {
 	font-family: 'Raleway', sans-serif;
   text-align: center;
   margin: 0;
-   position: relative; /*because I need an absolute positioning for the modal overlay, I need this line*/
 }
 
 .site-headline {
@@ -86,8 +85,7 @@ img.avatar {
   display: none;
 }
 
-.modal {
-  position: relative;
+.overlay {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -100,37 +98,35 @@ img.avatar {
   overflow: auto;
 }
 
+.modal {
+  position: relative;
+  margin: 15% auto;
+  width: 400px;
+}
+
 .modal-content {
-    width: 430px;
-    margin: 15% auto auto;
-    position: relative;
-    text-align: center;
-    background: #fff;
-    color: darkgray;
-    border: 1px solid #778;
-    border-radius: 10px;
-    padding: 30px 20px;
-    position: absolute; /* in relation to body tag*/
-    top: 13.5%;
-    left: 41.5%;
-    height: 500px;
-    font-size: 17px;
+  width: 410px;
+  text-align: center;
+  background: #fff;
+  color: darkgray;
+  border: 1px solid #778;
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: absolute; /* in relation to .modal*/
+  top: -204px;
+  right: -6px;
+  font-size: 17px;
 }
 
 .modal-close {
-  position: absolute; /* in relation to .modal-content */
-  right: 42.5%;
-  top: 180px;
+  position: absolute; /* in relation to .modal */
+  right: 22px;
+  top: -200px;
   z-index: 1;
   border: none;
   font-size: 28px;
   background: transparent;
   cursor: pointer;
-}
-
-.modal-content.avatar {
-  width: 140px;
-  height: auto;
 }
 
 .center-content,
